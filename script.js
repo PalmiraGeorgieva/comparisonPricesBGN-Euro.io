@@ -39,9 +39,9 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
   coinSound.play()
 
   if(percentDiff > 0) {
-    percentEl.classList.add('more-expensive')
+    percentEl.classList.add('more-expensive');
   } else if(percentDiff < 0) {
-    percentEl.classList.add('cheaper')
+    percentEl.classList.add('cheaper');
   } 
   
   if (percentDiff > 10) {
@@ -67,6 +67,7 @@ clearBtn.addEventListener('click', () => {
    percentEl.className = '';
    resultDiv.classList.remove('show');
 })
+
 
 
 
