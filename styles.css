@@ -83,6 +83,7 @@ p {
     margin: 20px auto;
     padding: 15px;
     background-color: #eef2ff;
+    border: 1px solid black;
     border-radius: 10px;
     opacity: 0;
     min-height: 90px;
@@ -132,6 +133,7 @@ p {
   cursor: pointer;
   margin-top: 10px;
 }
+
 
 
 
