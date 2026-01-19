@@ -9,6 +9,7 @@ const percentEl = document.getElementById('percent');
 const resultDiv = document.getElementById('result')
 const coinSound = document.getElementById('coinSound');
 const alertSound = document.getElementById('alertSound');
+const clearBtn = document.getElementById('clearBtn');
 
 document.getElementById('compareBtn').addEventListener('click', () =>{
   const bgn = Number(bgnInput.value);
@@ -49,6 +50,7 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
   resultDiv.classList.add('show')
 
 })
+
 
 
 
