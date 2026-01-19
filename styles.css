@@ -4,7 +4,7 @@
 
 body {
    font-family: Arial, sans-serif;
-  background-color: #98FB98;
+  background-color: #15803d;
   margin: 0;
   padding: 20px;
   text-align: center;
@@ -16,7 +16,7 @@ h1 {
 
 p {
     margin-top: 0;
-    color: #555
+    color: #070707;
 }
 .calculator-container {
     max-width: 350px;
@@ -69,7 +69,15 @@ p {
     margin: 20px auto;
     padding: 15px;
     background-color: #eef2ff;
-    border-radius: 8px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.4s ease;
+}
+
+#result.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #result p {
@@ -77,12 +85,13 @@ p {
     font-weight: bold;
 }
 
-.cheaper {
+.more-expensive {
     color: #b91c1c;
 }
 
-.more-expensive {
+ .cheaper {
     color: #15803d;
 }
+
 
 
