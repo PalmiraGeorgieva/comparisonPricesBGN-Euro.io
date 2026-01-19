@@ -7,7 +7,10 @@ const translations = {
     compare: 'Сравни',
     clear: 'Изчисти',
     bgnPlaceholder: 'Моля въведете цената в лева!',
-    euroPlaceholder: 'Моля въведете цената в евро!'
+    euroPlaceholder: 'Моля въведете цената в евро!',
+    expected: 'Очаквана цена в Евро:',
+    difference: 'Разлика:',
+    percent: 'Процентна разлика:'
   },
 
   en: {
@@ -18,7 +21,10 @@ const translations = {
     compare: 'Compare',
     clear: 'Clear',
     bgnPlaceholder: 'Enter price in BGN!',
-    euroPlaceholder: 'Enter price in Euro!'
+    euroPlaceholder: 'Enter price in Euro!',
+    expected: 'Expected price in Euro:',
+    difference: 'Difference:',
+    percent: 'Percentage difference:'
   }
 }
 
@@ -35,8 +41,10 @@ function changeLanguage(lang){
 }
 
 const languageSelect = document.getElementById('languageSelect')
+let currentLang = 'bg'
 languageSelect.addEventListener('change', (e) => {
-  changeLanguage(e.target.value)
+  currentLang = e.target.value;
+  changeLanguage(currentLang)
 })
 
 const RATE = 1.95583;
@@ -109,6 +117,7 @@ clearBtn.addEventListener('click', () => {
    percentEl.className = '';
    resultDiv.classList.remove('show');
 })
+
 
 
 
