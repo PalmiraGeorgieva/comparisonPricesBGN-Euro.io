@@ -1,3 +1,44 @@
+const translations = {
+  bg: {
+    title: 'Сравнение на цени Евро/Лева',
+    rate: '1 Евро = 1.95583 Лева' ,
+    bgnLabel: 'Цена в лева',
+    euroLabel: 'Обявена цена в Евро',
+    compare: 'Сравни',
+    clear: 'Изчисти',
+    bgnPlaceholder: 'Моля въведете цената в лева!',
+    euroPlaceholder: 'Моля въведете цената в евро!'
+  },
+
+  en: {
+    title: 'Price Comparison Euro/BGN',
+    rate: '1 Euro = 1.95583 BGN' ,
+    bgnLabel: 'Price n BGN',
+    euroLabel: 'Listed price in Euro',
+    compare: 'Compare',
+    clear: 'Clear',
+    bgnPlaceholder: 'Enter price in BGN!',
+    euroPlaceholder: 'Enter price in Euro!'
+  }
+}
+
+function changeLanguage(lang){
+  document.querySelectorAll('[data-key').forEach(el => {
+    const key = el.getAttribute('data-key');
+    el.textContent = translations[lang][key];
+  });
+
+  document.querySelectorAll('[data-key-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-key-placeholder');
+    el.textContent = translations[lang][key];
+  })
+}
+
+const languageSelect = document.getElementById('languageSelect')
+languageSelect.addEventListener('change', (e) => {
+  changeLanguage(e.target.value)
+})
+
 const RATE = 1.95583;
 
 const bgnInput = document.getElementById('bgnPrice');
@@ -68,6 +109,7 @@ clearBtn.addEventListener('click', () => {
    percentEl.className = '';
    resultDiv.classList.remove('show');
 })
+
 
 
 
