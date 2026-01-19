@@ -37,12 +37,17 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
   }
   percentEl.textContent = `Процентна разлика: ${percentDiff.toFixed(2)}%`;
   coinSound.play()
+
+  if(percentDiff > 0) {
+    percentEl.classList.add('more-expensive')
+  } else if(percentDiff < 0) {
+    percentEl.classList.add('cheaper')
+  } 
   
   if (percentDiff > 10) {
     percentEl.classList.add('warning');
     percentEl.textContent += ' ⚠️ над 10%';
     percentEl.style.fontWeight = 'bold';
-    percentEl.style.color = '#b91c1c';
     alertSound.play()
   }
   
@@ -62,6 +67,7 @@ clearBtn.addEventListener('click', () => {
    percentEl.className = '';
    resultDiv.classList.remove('show');
 })
+
 
 
 
