@@ -106,6 +106,9 @@ p {
  .cheaper {
     color: #15803d;
 }
+.more-expensive, cheaper {
+    transition: color 0.3s ease;
+}
 
 .language-switch {
   display: flex;
@@ -134,6 +137,11 @@ p {
   margin-top: 10px;
 }
 
+@media (max-width: 400px) {
+    .calculator-container {
+        padding: 15px;
+    }
+}
 
 
 
