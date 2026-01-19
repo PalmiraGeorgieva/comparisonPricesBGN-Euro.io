@@ -73,18 +73,18 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
   const diff = euro - expectedPrice;
   const percentDiff = (diff / expectedPrice) * 100;
 
-  expectedEl.textContent = `Очаквана цена в Евро: ${expectedPrice.toFixed(2)} €`;
+  expectedEl.textContent = `${translations[currentLang].expected} ${expectedPrice.toFixed(2)} €`;
   differenceEl.className = '';
   percentEl.className = '';
 
-  differenceEl.textContent = `Разликата: ${diff > 0 ? '+' : ''}${diff.toFixed(2)} €`;
+  differenceEl.textContent = `${translations[currentLang].difference} ${diff > 0 ? '+' : ''}${diff.toFixed(2)} €`;
 
   if (diff > 0) {
     differenceEl.classList.add('more-expensive');
   } else if (diff< 0) {
     differenceEl.classList.add('cheaper');
   }
-  percentEl.textContent = `Процентна разлика: ${percentDiff.toFixed(2)}%`;
+  percentEl.textContent = `${translations[currentLang].percent} ${percentDiff.toFixed(2)}%`;
   coinSound.play()
 
   if(percentDiff > 0) {
@@ -117,6 +117,7 @@ clearBtn.addEventListener('click', () => {
    percentEl.className = '';
    resultDiv.classList.remove('show');
 })
+
 
 
 
