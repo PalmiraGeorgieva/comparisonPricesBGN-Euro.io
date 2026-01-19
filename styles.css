@@ -106,14 +106,34 @@ p {
     color: #15803d;
 }
 
-#languageSelect {
-    max-width: 350px;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    margin-bottom: 20px; 
+.language-switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
 }
+
+.lang-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.lang-btn:hover {
+  transform: scale(1.2);
+}
+
+#soundToggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
 
 
 
