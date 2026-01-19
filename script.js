@@ -17,11 +17,6 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
     return;
   }
 
-  if (!bgnPrice || !euroPrice) {
-  resultDiv.classList.add('show');
-  return;
- }
-
   const expectedPrice = bgn / RATE;
   const diff = euro - expectedPrice;
   const percentDiff = (diff / expectedPrice) * 100;
@@ -47,9 +42,10 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
     percentEl.style.color = '#b91c1c';
   }
   
-
+  resultDiv.classList.add('show')
 
 })
+
 
 
 
