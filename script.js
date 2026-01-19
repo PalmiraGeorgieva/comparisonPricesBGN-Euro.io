@@ -6,6 +6,7 @@ const euroInput = document.getElementById('euroPrice');
 const expectedEl = document.getElementById('expected');
 const differenceEl = document.getElementById('difference');
 const percentEl = document.getElementById('percent');
+const resultDiv = document.getElementById('result')
 
 document.getElementById('compareBtn').addEventListener('click', () =>{
   const bgn = Number(bgnInput.value);
@@ -49,6 +50,7 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
 
 
 })
+
 
 
 
