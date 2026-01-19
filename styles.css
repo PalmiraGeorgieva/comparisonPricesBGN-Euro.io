@@ -77,11 +77,12 @@ p {
     font-weight: bold;
 }
 
-.positive {
+.cheaper {
     color: #b91c1c;
 }
 
-.negative {
+.more-expensive {
     color: #15803d;
 }
+
 
