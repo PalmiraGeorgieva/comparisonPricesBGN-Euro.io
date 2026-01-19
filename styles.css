@@ -107,6 +107,16 @@ p {
     color: #15803d;
 }
 
+#languageSelect {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 20px; 
+}
+
+
 
 
 
