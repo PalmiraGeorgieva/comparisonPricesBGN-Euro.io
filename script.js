@@ -25,7 +25,6 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
   const percentDiff = (diff / expectedPrice) * 100;
 
   expectedEl.textContent = `Очаквана цена в Евро: ${expectedPrice.toFixed(2)} €`;
-
   differenceEl.className = '';
   percentEl.className = '';
 
@@ -49,6 +48,19 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
   
   resultDiv.classList.add('show')
 
+})
+
+clearBtn.addEventListener('click', () => {
+   bgnInput.value = '';
+   euroInput.value = '';
+
+   expectedEl.textContent = '';
+   differenceEl.textContent = '';
+   percentEl.textContent = '';
+  
+   differenceEl.className = '';
+   percentEl.className = '';
+   resultDiv.classList.remove('show');
 })
 
 
