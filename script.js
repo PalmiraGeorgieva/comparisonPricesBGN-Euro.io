@@ -27,9 +27,10 @@ const translations = {
     percent: 'Percentage difference:'
   }
 }
-
+let currentLang = 'bg'
 function changeLanguage(lang){
-  document.querySelectorAll('[data-key').forEach(el => {
+  currentLang = lang
+  document.querySelectorAll('[data-key]').forEach(el => {
     const key = el.getAttribute('data-key');
     el.textContent = translations[lang][key];
   });
@@ -130,6 +131,7 @@ clearBtn.addEventListener('click', () => {
    percentEl.className = '';
    resultDiv.classList.remove('show');
 })
+
 
 
 
