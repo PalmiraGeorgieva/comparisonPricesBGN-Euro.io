@@ -85,13 +85,12 @@ p {
     background-color: #eef2ff;
     border-radius: 10px;
     opacity: 0;
-    transform: translateY(10px);
-    transition: 0.4s ease;
+    min-height: 90px;
+    transition: opacity 0.3s ease;
 }
 
 #result.show {
     opacity: 1;
-    transform: translateY(0);
 }
 
 #result p {
@@ -115,6 +114,7 @@ p {
     font-size: 16px;
     margin-bottom: 20px; 
 }
+
 
 
 
