@@ -7,6 +7,8 @@ const expectedEl = document.getElementById('expected');
 const differenceEl = document.getElementById('difference');
 const percentEl = document.getElementById('percent');
 const resultDiv = document.getElementById('result')
+const coinSound = document.getElementById('coinSound');
+const alertSound = document.getElementById('alertSound');
 
 document.getElementById('compareBtn').addEventListener('click', () =>{
   const bgn = Number(bgnInput.value);
@@ -34,17 +36,20 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
     differenceEl.classList.add('cheaper');
   }
   percentEl.textContent = `Процентна разлика: ${percentDiff.toFixed(2)}%`;
-
+  coinSound.play()
+  
   if (percentDiff > 10) {
     percentEl.classList.add('warning');
     percentEl.textContent += ' ⚠️ над 10%';
     percentEl.style.fontWeight = 'bold';
     percentEl.style.color = '#b91c1c';
+    alertSound.play()
   }
   
   resultDiv.classList.add('show')
 
 })
+
 
 
 
