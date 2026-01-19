@@ -28,9 +28,9 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
   differenceEl.textContent = `Разликата: ${diff > 0 ? '+' : ''}${diff.toFixed(2)} €`;
 
   if (diff > 0) {
-    differenceEl.classList.add('cheaper');
-  } else if (diff< 0) {
     differenceEl.classList.add('more-expensive');
+  } else if (diff< 0) {
+    differenceEl.classList.add('cheaper');
   }
   percentEl.textContent = `Процентна разлика: ${percentDiff.toFixed(2)}%`;
 
@@ -44,4 +44,5 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
 
 
 })
+
 
