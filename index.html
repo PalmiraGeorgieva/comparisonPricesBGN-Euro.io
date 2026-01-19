@@ -7,15 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <select id='languageSelect'>
+        <option value='bg'>Български</option>
+        <option value='en'>English</option>
+    </select>
     <div class="calculator-container">
-        <h1>Сравнение на цени Евро/Лева</h1>
-        <p>1 Евро = 1.95583 Лева</p>
-        <label for="bgnPrice">Цена в лева:</label>
-        <input type="number" id="bgnPrice" placeholder="Моля въведете цената в лева!">
-        <label for="euroPrice">Обявена цена в Евро:</label>
-        <input type="number" id="euroPrice" placeholder="Моля въведете цената в Евро!">
-        <button id="compareBtn">Сравни</button>
-        <button id='clearBtn'>Изчисти</button>
+        <h1 data-key='title'>Сравнение на цени Евро/Лева</h1>
+        <p data-key='rate'>1 Евро = 1.95583 Лева</p>
+        <label for="bgnPrice" data-key='bgnLabel'>Цена в лева:</label>
+        <input type="number" id="bgnPrice" data-key-placeholder='bgnPlaceholder' placeholder="Моля въведете цената в лева!">
+        <label for="euroPrice" data-key='euroLabel'>Обявена цена в Евро:</label>
+        <input type="number" id="euroPrice" data-key-placeholder='euroPlaceholder' placeholder="Моля въведете цената в Евро!">
+        <button id="compareBtn" data-key='compare'>Сравни</button>
+        <button id='clearBtn' data-key='clear'>Изчисти</button>
         
          <div id="result">
         <p id="expected"></p>
@@ -32,5 +36,6 @@
 </body>
 
 </html>
+
 
 
