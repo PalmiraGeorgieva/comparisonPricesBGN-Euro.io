@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Price Euro/Leva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Сравнение на цени Евро/Лева</h1>
+    <p>1. Евро = 1.95583 Лева</p>
+    <div class="calculator-container">
+        <label for="bgnPrice">Цена в лева:</label>
+        <input type="number" id="bgnPrice" placeholder="Моля въведете цената в лева!">
+        <label for="euroPrice">Обявена цена в Евро:</label>
+        <input type="number" id="euroPrice" placeholder="Моля въведете цената в Евро!">
+        <button id="compareBtn">Сравни</button>
+    </div>
+    <div id="result">
+        <p id="expected"></p>
+        <p id="difference"></p>
+        <p id="percent"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
