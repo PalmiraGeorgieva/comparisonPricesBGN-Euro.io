@@ -36,10 +36,11 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
 
   if (percentDiff > 10) {
     percentEl.classList.add('warning');
-    percentEl.textContent += ' ⚠️ Възможно подвеждаща цена!';
+    percentEl.textContent += ' ⚠️ над 10%';
     percentEl.style.fontWeight = 'bold';
     percentEl.style.color = '#b91c1c';
   }
   
+
 
 })
