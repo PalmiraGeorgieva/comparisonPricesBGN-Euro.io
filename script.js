@@ -37,7 +37,7 @@ function changeLanguage(lang){
 
   document.querySelectorAll('[data-key-placeholder]').forEach(el => {
     const key = el.getAttribute('data-key-placeholder');
-    el.textContent = translations[lang][key];
+    el.placeholder = translations[lang][key];
   })
 }
 
@@ -111,7 +111,9 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
     percentEl.classList.add('warning');
     percentEl.textContent += ' ⚠️ над 10%';
     percentEl.style.fontWeight = 'bold';
-    alertSound.play()
+    if (soundEnabled) {
+       alertSound.play();
+     }
   }
   
   resultDiv.classList.add('show')
@@ -131,6 +133,7 @@ clearBtn.addEventListener('click', () => {
    percentEl.className = '';
    resultDiv.classList.remove('show');
 })
+
 
 
 
