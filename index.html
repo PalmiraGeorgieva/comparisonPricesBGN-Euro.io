@@ -7,20 +7,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Сравнение на цени Евро/Лева</h1>
-    <p>1. Евро = 1.95583 Лева</p>
     <div class="calculator-container">
+        <h1>Сравнение на цени Евро/Лева</h1>
+        <p>1. Евро = 1.95583 Лева</p>
         <label for="bgnPrice">Цена в лева:</label>
         <input type="number" id="bgnPrice" placeholder="Моля въведете цената в лева!">
         <label for="euroPrice">Обявена цена в Евро:</label>
         <input type="number" id="euroPrice" placeholder="Моля въведете цената в Евро!">
         <button id="compareBtn">Сравни</button>
+        <button id='clearBtn'>Изчисти</button>
+        <audio id='coinSound' src='drop-coin.mp3' preload='auto'></audio>
+        <audio id='alertSound' src='alert-demo.mp3' preload='auto'></audio>
     </div>
     <div id="result">
         <p id="expected"></p>
         <p id="difference"></p>
         <p id="percent"></p>
+        
     </div>
+    
     <script src="script.js"></script>
 </body>
+
 </html>
