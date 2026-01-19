@@ -40,12 +40,22 @@ function changeLanguage(lang){
   })
 }
 
-const languageSelect = document.getElementById('languageSelect')
-let currentLang = 'bg'
-languageSelect.addEventListener('change', (e) => {
-  currentLang = e.target.value;
-  changeLanguage(currentLang)
-})
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.lang;
+    changeLanguage(lang);
+  });
+});
+
+let soundEnabled = true;
+
+const soundBtn = document.getElementById('soundToggle');
+
+soundBtn.addEventListener('click', () => {
+  soundEnabled = !soundEnabled;
+  soundBtn.textContent = soundEnabled ? '🔊' : '🔇';
+});
+
 
 const RATE = 1.95583;
 
@@ -85,7 +95,10 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
     differenceEl.classList.add('cheaper');
   }
   percentEl.textContent = `${translations[currentLang].percent} ${percentDiff.toFixed(2)}%`;
-  coinSound.play()
+  if (soundEnabled) {
+   coinSound.play();
+  }
+
 
   if(percentDiff > 0) {
     percentEl.classList.add('more-expensive');
@@ -117,6 +130,7 @@ clearBtn.addEventListener('click', () => {
    percentEl.className = '';
    resultDiv.classList.remove('show');
 })
+
 
 
 
