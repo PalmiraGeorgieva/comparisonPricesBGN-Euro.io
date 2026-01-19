@@ -16,7 +16,7 @@ const translations = {
   en: {
     title: 'Price Comparison Euro/BGN',
     rate: '1 Euro = 1.95583 BGN' ,
-    bgnLabel: 'Price n BGN',
+    bgnLabel: 'Price in BGN',
     euroLabel: 'Listed price in Euro',
     compare: 'Compare',
     clear: 'Clear',
@@ -117,6 +117,7 @@ clearBtn.addEventListener('click', () => {
    percentEl.className = '';
    resultDiv.classList.remove('show');
 })
+
 
 
 
