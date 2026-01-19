@@ -59,14 +59,16 @@ clearBtn.addEventListener('click', () => {
    bgnInput.value = '';
    euroInput.value = '';
 
-   expectedEl.textContent = '';
-   differenceEl.textContent = '';
-   percentEl.textContent = '';
+   expectedEl.textContent = '-';
+   differenceEl.textContent = '-';
+   percentEl.textContent = '-';
+
   
    differenceEl.className = '';
    percentEl.className = '';
    resultDiv.classList.remove('show');
 })
+
 
 
 
