@@ -67,7 +67,7 @@ p {
     width: 100%;
     margin-top: 10px;
     padding: 12px;
-    background-color: #aaa;
+    background-color: #b91c1c;
     color: white;
     border: none;
     border-radius: 6px;
@@ -142,6 +142,7 @@ p {
         padding: 15px;
     }
 }
+
 
 
 
