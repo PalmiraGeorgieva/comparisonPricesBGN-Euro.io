@@ -109,7 +109,7 @@ document.getElementById('compareBtn').addEventListener('click', () =>{
   
   if (percentDiff > 10) {
     percentEl.classList.add('warning');
-    percentEl.textContent += ' ⚠️ над 10%';
+    percentEl.textContent += ' ⚠️';
     percentEl.style.fontWeight = 'bold';
     if (soundEnabled) {
        alertSound.play();
@@ -133,6 +133,7 @@ clearBtn.addEventListener('click', () => {
    percentEl.className = '';
    resultDiv.classList.remove('show');
 })
+
 
 
 
